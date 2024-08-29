@@ -1,0 +1,618 @@
+/**
+ * -----------------------------------------
+ *
+ * @format
+ */
+
+/* Basic Structure */
+/* ----------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fff;
+  font-family: 'Lato' 'arial' 'san-serif';
+  color: #555;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* ----------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------- */
+.row {
+  width: 90%;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.box {
+  padding: 1%;
+}
+
+/* ------ HEADINGS ------- */
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+h1 {
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 240%;
+  margin-bottom: 20px;
+  word-spacing: 4px;
+}
+
+h2 {
+  letter-spacing: 1px;
+  font-size: 180%;
+  word-spacing: 2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2:after {
+  display: block;
+  height: 2px;
+  width: 100px;
+  background-color: #e67e22;
+  content: ' ';
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+}
+
+/* ------ PARAGRAPHS -------- */
+
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+/* ------- ICONS -------- */
+
+.icon-big {
+  font-size: 350%;
+  display: block;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+.icon-small {
+  display: inline-block;
+  color: #e67e22;
+  width: 30px;
+  text-align: center;
+  font-size: 120%;
+  line-height: 120%;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* -------- LINKS  -----------*/
+
+a:link,
+a:visited {
+  color: #e67e22;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #e67e22;
+  transition: border 0.2s color;
+}
+
+a:active,
+a:hover {
+  color: #555;
+  border-bottom: 2px solid transparent;
+}
+
+/* ------- BUTTONS -------- */
+.btn:link,
+.btn:visited,
+input[type='submit'] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  color: #fff;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type='submit'] {
+  background-color: #e67e22;
+  margin-right: 15px;
+  border: 1px solid #e67e22;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  color: #e67e22;
+  border: 1px solid #e67e22;
+}
+
+.btn:active,
+.btn:hover,
+input[type='submit']:active,
+input[type='submit']:hover {
+  background-color: #b75f02;
+  color: #fff;
+}
+
+.btn-full:active,
+.btn-full:hover,
+input[type='submit']:active,
+input[type='submit']:hover {
+  border: 1px solid #b75f02;
+}
+
+.btn-ghost:active,
+.btn-ghost:hover {
+  border: 1px solid #b75f02;
+}
+
+/* ----------------------------------------- */
+/* HEADER */
+/* ----------------------------------------- */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./img/hero-min.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  height: 90px;
+  width: auto;
+  float: left;
+  margin-top: 15px;
+}
+.logo-black {
+  display: none;
+    height: 50px;
+        width: auto;
+        float: left;
+        margin: 5px 0;
+}
+
+/* MAIN NAV */
+.main-nav {
+  float: right;
+  list-style: none; /*for removing bullets*/
+  margin-top: 45px;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 35px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+  padding-bottom: 5px;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #e67e22;
+}
+
+/* STICKY nav */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 2px #efefef;
+  z-index: 9999;
+}
+
+.sticky .main-nav {
+    margin-top: 22px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+  padding: 16px 0;
+  color: #555;
+}
+
+.sticky .logo {display: none;}
+.sticky .logo-black {display: block;}
+/* ----------------------------------------- */
+/* FEATURES */
+/* ----------------------------------------- */
+
+.section-features .long-copy {
+  margin-bottom: 40px;
+}
+
+/* ----------------------------------------- */
+/* MEALS */
+/* ----------------------------------------- */
+
+.section-meals {
+  padding: 0;
+}
+
+.meals-showcase {
+  list-style: none;
+  width: 100%;
+}
+
+.meals-showcase li {
+  width: 25%;
+  display: block;
+  float: left;
+}
+
+.meals-photo {
+  width: 100%;
+  margin: 0;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.meals-photo img {
+  height: auto;
+  opacity: 0.7;
+  width: 100%;
+  transform: scale(1.15);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.meals-photo img:hover {
+  transform: scale(1.04);
+  opacity: 1;
+}
+
+/* ----------------------------------------- */
+/* HOW IT WORKS */
+/* ----------------------------------------- */
+
+.section-steps {
+  background-color: #f3f3f3;
+}
+
+.steps-box:first-child {
+  text-align: right;
+  padding-right: 3%;
+  margin-top: 30px;
+}
+
+.steps-box:last-child {
+  padding-left: 3%;
+  margin-top: 80px;
+}
+.app-screen {
+  width: 40%;
+}
+.works-step {
+  margin-bottom: 50px;
+}
+.works-step:last-of-type {
+  margin-bottom: 80px;
+}
+.works-step div {
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  display: inline-block;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  padding: 5px;
+  font-size: 150%;
+  float: left;
+  margin-right: 25px;
+}
+
+.btn-app:link,
+.btn-app:visited {
+  border-bottom: none;
+}
+
+.btn-app img {
+  height: 50px;
+  width: auto;
+  margin-right: 5px;
+}
+
+/* ----------------------------------------- */
+/* CITY */
+/* ----------------------------------------- */
+
+.box img {
+  height: auto;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.city-feature {
+  margin-bottom: 5px;
+}
+
+/* ----------------------------------------- */
+/* CUSTOMER'S SECTION */
+/* ----------------------------------------- */
+
+.section-customers {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('./img/back-customers-min.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+
+blockquote:before {
+  content: '\201C';
+  font-size: 400%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
+cite {
+  font-size: 90%;
+  margin-top: 20px;
+  display: block;
+}
+
+cite img {
+  height: 45px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* ----------------------------------------- */
+/* PLANS SECTION */
+/* ----------------------------------------- */
+.section-plans {
+  background-color: #f4f4f4;
+}
+
+.plan-box {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 0 2px 2px #efefef;
+}
+
+.plan-box div {
+  padding: 15px;
+  border: 1px solid #e8e8e8;
+}
+
+.plan-box div:first-child {
+  background-color: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child {
+  text-align: center;
+  border: 0;
+}
+.plan-price {
+  font-size: 300%;
+  font-weight: 100;
+  margin-bottom: 10px;
+  color: #e67e22;
+}
+
+.plan-price span {
+  font-size: 30%;
+  font-weight: 300;
+}
+
+.plan-price-meal {
+  font-size: 80%;
+}
+
+.plan-box ul {
+  list-style: none;
+}
+
+.plan-box ul li {
+  padding: 5px 0;
+}
+
+/* ----------------------------------------- */
+/* FORMS SECTION */
+/* ----------------------------------------- */
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto; /*for making it centre */
+}
+
+input[type='text'],
+input[type='email'],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type='checkbox'] {
+  margin: 10px 5px 10px 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* ----------------------------------------- */
+/* FOOTER... */
+/* ----------------------------------------- */
+
+footer {
+  background-color: #333333;
+  color: #e4e3e3;
+  padding: 50px;
+  font-size: 80%;
+}
+
+.footer-links,
+.social-links {
+  list-style: none;
+}
+
+.footer-links {
+  float: left;
+}
+
+.social-links {
+  float: right;
+}
+
+.footer-links li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-links li:last-child,
+.social-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-links li a:link,
+.footer-links li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  color: #888;
+  border: 0;
+  transition: color 0.2s;
+}
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 160%;
+}
+
+.footer-links li a:active,
+.footer-links li a:hover {
+  color: #ddd;
+}
+.footer-links li a:active,
+.footer-links li a:hover,
+.social-links li a:active,
+.social-links li a:hover {
+  text-decoration: none;
+}
+
+.ion-social-facebook:hover {
+  color: #1877f2;
+}
+.ion-social-instagram:hover {
+  color: #c32aa3;
+}
+.ion-social-googleplus:hover {
+  color: #db4437;
+}
+.ion-social-twitter:hover {
+  color: #1da1f2;
+}
+
+.ion-social-twitter,
+.ion-social-facebook,
+.ion-social-instagram,
+.ion-social-googleplus {
+  transition: color 0.2s;
+}
+footer div p {
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* ANIMATIONS */
+
+.js--wp-1, 
+.js--wp-2,
+.js--wp-3 {
+  opacity: 0;
+  animation-duration: 1s;
+}
+
+.js--wp-4 {
+  animation-duration: 1s;
+}
+
+.js--wp-1.animated, 
+.js--wp-2.animated,
+.js--wp-3.animated,
+.js--wp-4.animated {
+  opacity: 1;
+}
+
