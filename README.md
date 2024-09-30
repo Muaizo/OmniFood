@@ -1,7 +1,3 @@
-Here's a sample README for your OmniFood project:
-
----
-
 # OmniFood
 
 OmniFood is a modern and responsive website designed to showcase a fictional food delivery service. The project leverages HTML, CSS, and jQuery to create a dynamic user experience with features such as sticky navigation, smooth scrolling, and animated content.
